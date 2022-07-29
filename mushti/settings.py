@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'main_user.MainUser'
 
 # Application definition
 
@@ -40,7 +41,8 @@ INSTALLED_APPS = [
     'project',
     'client',
     'contributor',
-    'project_contribution'
+    'project_contribution',
+    'main_user'
 ]
 
 MIDDLEWARE = [

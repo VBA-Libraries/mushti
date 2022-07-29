@@ -8,7 +8,7 @@ from django.urls import reverse
 
 class CreateClientView(CreateView):
     model=Client
-    template_name= "clients/create_view.html"
+    template_name= "clients/client_create_view.html"
     # fields = Client._meta.get_fields()
     fields = ['first_name','last_name','address','contact_no','email','gender']
 

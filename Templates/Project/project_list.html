@@ -1,10 +1,18 @@
 {% extends '../base.html' %}
 
 {% block content %}
+<div>
+    {% if user.is_authenticated %}
+    Welcome {{ user.full_name}}
+
+    {% endif %}
+
+</div>
 List of Projects:
+<div></div>
 <ul>
     {% for obj in object_list %}
-    <li> {{obj.name}}</li>
+    <li> <a href="{% url 'project_detail_view' obj.id %}"> {{obj.name}}</a></li>
 
     {% endfor %}
 
