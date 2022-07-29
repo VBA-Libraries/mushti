@@ -3,7 +3,8 @@
 {% block content %}
 <div>
     {% if user.is_authenticated %}
-    Welcome {{ user.full_name}}
+    Welcome {{ user.first_name}}
+    <a href="{% url 'logout_view' %}">Logout</a>
 
     {% endif %}
 

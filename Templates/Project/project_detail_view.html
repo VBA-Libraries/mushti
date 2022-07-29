@@ -8,4 +8,13 @@
     <li>Amount: {{object.budget}} </li>
 </ul>
 
+<form method="post" action="{% url 'contribution_create_view'  %}">
+    {% csrf_token %}
+
+    <input type="text" name="amount" />
+    <input type="hidden" name="project_id" value="{{object.id}}" />
+
+    <input class="btn btn-primary" type="submit" value="Add Contribution">
+</form>
+
 {% endblock %}
