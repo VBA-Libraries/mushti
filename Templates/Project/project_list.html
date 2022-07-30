@@ -1,5 +1,5 @@
 {% extends '../base.html' %}
-
+{% load index %}
 {% block content %}
 <div>
     {% if user.is_authenticated %}
@@ -12,10 +12,15 @@
 List of Projects:
 <div></div>
 <ul>
-    {% for obj in object_list %}
-    <li> <a href="{% url 'project_detail_view' obj.id %}"> {{obj.name}}</a></li>
+    {% with i="0" %}
+    {% for object in object_list%}
+
+    <li> <a class="btn""" href="{% url 'project_detail_view' object.id %}"> {{object.name }} {{object.budget }}
+            ({{funded_amounts|index:forloop.counter0}})</a></li>
 
     {% endfor %}
+    {% endwith %}
+    {{funded_amounts}}
 
 </ul>
 

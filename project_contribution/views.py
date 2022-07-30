@@ -26,8 +26,7 @@ def project_contribution_create_view(request):
     form = ProjectContributionForm(request.POST or None)
     context={}
     if request.method == "POST":
-        
-        
+    
         amount = request.POST.get('amount')
         print(amount)
         if form.is_valid():

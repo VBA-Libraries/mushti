@@ -5,7 +5,7 @@
 <ul>
     <li>Name: {{object.name}}</li>
     <li>Description: {{object.description}}</li>
-    <li>Amount: {{object.budget}} </li>
+    <li>Amount: {{object.budget}} , Funded: {{total_funded}} </li>
 </ul>
 
 <form method="post" action="{% url 'contribution_create_view'  %}">
